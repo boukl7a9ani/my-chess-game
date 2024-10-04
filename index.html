@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/1.0.0/chess.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard-1.0.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard-1.0.0.min.css">
+    <title>Enhanced Chess Learning Game</title>
+</head>
+<body>
+    <!-- Login Section -->
+    <div id="login">
+        <h2>Welcome to Chess Learning!</h2>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button onclick="startGame()">Start Learning</button>
+    </div>
+    
+    <!-- Game Options Section -->
+    <div id="gameOptions" style="display: none;">
+        <h3>Choose Your Activity:</h3>
+        <button onclick="chooseLevel()">Learn Chess</button>
+        <button onclick="practiceScenario()">Practice Scenarios</button>
+        <button onclick="chessPuzzles()">Chess Puzzles</button>
+        <button onclick="playAgainstAI()">Play Against AI</button>
+        <button onclick="showLeaderboard()">View Leaderboard</button>
+        <button onclick="teacherDashboard()">Teacher Dashboard</button>
+    </div>
+
+    <!-- Level Selection Section -->
+    <div id="levelOptions" style="display: none;">
+        <h3>Choose Difficulty Level:</h3>
+        <button onclick="startLearning('beginner')">Beginner</button>
+        <button onclick="startLearning('intermediate')">Intermediate</button>
+        <button onclick="startLearning('advanced')">Advanced</button>
+    </div>
+
+    <!-- Chess Board Section -->
+    <div id="chessBoard" style="display: none;">
+        <div id="board"></div>
+        <button onclick="endGame()">End Game</button>
+    </div>
+
+    <!-- Leaderboard Section -->
+    <div id="leaderboard" style="display: none;">
+        <h3>Leaderboard</h3>
+        <div id="leaderboardContent"></div>
+        <button onclick="closeLeaderboard()">Close</button>
+    </div>
+
+    <!-- Teacher Dashboard Section -->
+    <div id="teacherDashboard" style="display: none;">
+        <h3>Teacher Dashboard</h3>
+        <div id="dashboardContent"></div>
+        <button onclick="closeTeacherDashboard()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
